@@ -12,25 +12,23 @@
         <h1 class="uppercase text-white tracking-wide text-2xl font-bold mt-2">
           CRM - JSONServer
         </h1>
-        <p class="mt-10 text-white">
-          Administra tus Clientes con el CRM - JSONServer
-        </p>
+        <p class="mt-10 text-white">Manage your customers</p>
         <nav class="mt-8">
           <a
             href="index.html"
             class="px-3 py-1 text-white block hover:bg-teal-700 hover:text-yellow-400"
-            >Clientes</a
+            >Customers</a
           >
           <a
             href="nuevo-cliente.html"
             class="px-3 py-1 text-white block hover:bg-teal-900 mt-2 hover:text-yellow-400 bg-teal-700"
-            >Nuevo Cliente</a
+            >New Customer</a
           >
         </nav>
       </aside>
       <!--sidebar-->
       <main class="md:w-3/5 xl:w-4/5 px-5 py-10 bg-gray-200">
-        <h2 class="text-3xl font-light text-center">Nuevo Cliente</h2>
+        <h2 class="text-3xl font-light text-center">New Customer</h2>
 
         <div class="flex flex-col mt-10 items-center">
           <div
@@ -39,33 +37,33 @@
             <div
               class="shadow overflow-hidden sm:rounded-lg border-b border-gray-200"
             >
-              <form id="formulario" class="bg-white p-3" method="POST">
+              <form id="form" class="bg-white p-3" method="POST">
                 <div class="mb-4">
                   <label
                     class="block text-gray-700 text-sm font-bold mb-2"
-                    for="nombre"
-                    >Nombre</label
+                    for="name"
+                    >Name</label
                   >
                   <input
                     class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="nombre"
-                    name="nombre"
+                    id="name"
+                    name="name"
                     type="text"
-                    placeholder="Nombre Cliente"
+                    placeholder="Customer's name"
                   />
                 </div>
                 <div class="mb-4">
                   <label
                     class="block text-gray-700 text-sm font-bold mb-2"
                     for="email"
-                    >Correo</label
+                    >Email</label
                   >
                   <input
                     class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="email"
                     name="email"
                     type="email"
-                    placeholder="Email Cliente"
+                    placeholder="Customer's email"
                   />
                 </div>
 
@@ -73,36 +71,36 @@
                   <label
                     class="block text-gray-700 text-sm font-bold mb-2"
                     for="telefono"
-                    >Teléfono</label
+                    >Phone</label
                   >
                   <input
                     class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="telefono"
-                    name="telefono"
+                    name="phone"
                     type="tel"
-                    placeholder="Teléfono Cliente"
+                    placeholder="Customer's phone"
                   />
                 </div>
 
                 <div class="mb-4">
                   <label
                     class="block text-gray-700 text-sm font-bold mb-2"
-                    for="empresa"
-                    >Empresa</label
+                    for="company"
+                    >Company</label
                   >
                   <input
                     class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="empresa"
-                    name="empresa"
+                    id="company"
+                    name="company"
                     type="text"
-                    placeholder="Empresa Cliente"
+                    placeholder="Customer's company"
                   />
                 </div>
 
                 <input
                   type="submit"
                   class="bg-teal-600 hover:bg-teal-900 w-full mt-5 p-2 text-white uppercase font-bold"
-                  value="Agregar Cliente"
+                  value="Add Customer"
                 />
               </form>
             </div>
@@ -111,6 +109,6 @@
       </main>
     </div>
 
-    <script src="js/nuevocliente.js" type="module"></script>
+    <script src="js/newCustomer.js" type="module"></script>
   </body>
 </html>
