@@ -1,11 +1,11 @@
 {
   "customers": [
     {
-      "id": 19,
-      "name": "Sojo NUEVO!",
-      "email": "correo2@correo.com",
-      "phone": "12",
-      "company": "Sojo Inc."
+      "name": "Steve Jobs",
+      "email": "stevejobs@gmail.com",
+      "phone": "+1112345679",
+      "company": "Apple Inc.",
+      "id": 1
     }
   ]
 }
