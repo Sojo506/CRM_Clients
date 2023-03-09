@@ -1,3 +1,5 @@
+import { showAlert } from "./functions.js";
+
 (function () {
   const form = document.querySelector("#form");
   form.addEventListener("submit", validateCustomer);
@@ -19,9 +21,10 @@
 
     if (validate(customer)) {
       // show message
-      console.log('Campos requeridos')
-      return 
+      showAlert("Each field is required", "error");
+      return;
     }
+    
   }
 
   function validate(obj) {
