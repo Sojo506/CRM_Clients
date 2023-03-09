@@ -1,5 +1,6 @@
 const url = "http://localhost:4000/customers";
 
+// create a customer
 export const newCustomer = async (customer) => {
   console.log(customer);
 
@@ -16,5 +17,17 @@ export const newCustomer = async (customer) => {
     window.location.href = "index.html";
   } catch (error) {
     console.log("🚀 ~ file: API.js:9 ~ newCustomer ~ error:", error);
+  }
+};
+
+export const getCustomers = async () => {
+  try {
+
+    const response = await fetch(url);
+    const customers = await response.json();
+    return customers;
+
+  } catch (error) {
+    console.log("🚀 ~ file: API.js:27 ~ getCustomers ~ error:", error);
   }
 };
