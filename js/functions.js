@@ -6,7 +6,7 @@ export function showAlert(message, type) {
     alert.classList.add(
       `bg-${type === "error" ? "red" : "green"}-100`,
       `border-${type === "error" ? "red" : "green"}-400`,
-      "text-red-700",
+      `text-${type === "error" ? "red" : "green"}-700`,
       "px-4",
       "py-3",
       "rounded",
