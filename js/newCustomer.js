@@ -1,6 +1,7 @@
+import { newCustomer } from "./API.js";
 import { showAlert } from "./functions.js";
 
-(function () {
+(function async() {
   const form = document.querySelector("#form");
   form.addEventListener("submit", validateCustomer);
 
@@ -24,7 +25,9 @@ import { showAlert } from "./functions.js";
       showAlert("Each field is required", "error");
       return;
     }
-    
+
+    newCustomer(customer);
+    showAlert("Customer added", "success");
   }
 
   function validate(obj) {
