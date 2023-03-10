@@ -1,13 +1,6 @@
 {
   "customers": [
     {
-      "name": "Steve Jobs",
-      "email": "stevejobs@gmail.com",
-      "phone": "+1112345679",
-      "company": "Apple Inc.",
-      "id": 1
-    },
-    {
       "name": "Fabián Sojo",
       "email": "fabiansojowork@gmail.com",
       "phone": "87947110",

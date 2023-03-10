@@ -22,12 +22,20 @@ export const newCustomer = async (customer) => {
 
 export const getCustomers = async () => {
   try {
-
     const response = await fetch(url);
     const customers = await response.json();
     return customers;
-
   } catch (error) {
     console.log("🚀 ~ file: API.js:27 ~ getCustomers ~ error:", error);
+  }
+};
+
+export const deleteCustomerById = async (id) => {
+  try {
+    await fetch(`${url}/${id}`, {
+      method: "DELETE",
+    });
+  } catch (error) {
+    console.log("🚀 ~ file: API.js:39 ~ deleteCustomer ~ error:", error);
   }
 };
