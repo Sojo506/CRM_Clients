@@ -49,3 +49,18 @@ export const getCustomerById = async (id) => {
     console.log("🚀 ~ file: API.js:47 ~ getCustomerById ~ error:", error);
   }
 };
+
+export const updateCustomer = async (customer) => {
+  try {
+    await fetch(`${url}/${customer.id}`, {
+      method: "PUT",
+      body: JSON.stringify(customer),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    window.location.href = "index.html";
+  } catch (error) {
+    console.log("🚀 ~ file: API.js:57 ~ updateCustomer ~ error:", error);
+  }
+};

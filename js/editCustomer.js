@@ -1,4 +1,5 @@
-import { getCustomerById } from "./API.js";
+import { getCustomerById, updateCustomer } from "./API.js";
+import { showAlert, validate } from "./functions.js";
 
 (function () {
   // input fields
@@ -15,6 +16,10 @@ import { getCustomerById } from "./API.js";
 
     const customer = await getCustomerById(customerId);
     showCustomer(customer);
+
+    // Save changes
+    const form = document.querySelector("#form");
+    form.addEventListener("submit", validateCustomer);
   });
 
   function showCustomer(customer) {
@@ -24,5 +29,27 @@ import { getCustomerById } from "./API.js";
     inputPhone.value = phone;
     inputCompany.value = company;
     inputId.value = id;
+  }
+
+  function validateCustomer(e) {
+    e.preventDefault();
+
+    const customerObj = {
+      name: inputName.value,
+      email: inputEmail.value,
+      phone: inputEmail.value,
+      company: inputCompany.value,
+      id: parseInt(inputId.value),
+    };
+
+    if (validate(customerObj)) {
+      // show message
+      showAlert("Each field is required", "error");
+      return;
+    }
+
+    updateCustomer(customerObj);
+
+    showAlert("Customer Edited", "success");
   }
 })();

@@ -1,5 +1,5 @@
 import { newCustomer } from "./API.js";
-import { showAlert } from "./functions.js";
+import { showAlert, validate } from "./functions.js";
 
 (function async() {
   const form = document.querySelector("#form");
@@ -28,9 +28,5 @@ import { showAlert } from "./functions.js";
 
     newCustomer(customer);
     showAlert("Customer added", "success");
-  }
-
-  function validate(obj) {
-    return !Object.values(obj).every((input) => input !== "");
   }
 })();
