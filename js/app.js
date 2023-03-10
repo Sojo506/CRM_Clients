@@ -1,4 +1,4 @@
-import { getCustomers, deleteCustomerById } from "../js/API.js";
+import { getCustomers, deleteCustomerById } from "./API.js";
 
 (function () {
   const customer_list = document.querySelector("#client-list");

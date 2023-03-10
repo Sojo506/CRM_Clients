@@ -39,3 +39,13 @@ export const deleteCustomerById = async (id) => {
     console.log("🚀 ~ file: API.js:39 ~ deleteCustomer ~ error:", error);
   }
 };
+
+export const getCustomerById = async (id) => {
+  try {
+    const response = await fetch(`${url}/${id}`);
+    const customer = await response.json();
+    return customer;
+  } catch (error) {
+    console.log("🚀 ~ file: API.js:47 ~ getCustomerById ~ error:", error);
+  }
+};
